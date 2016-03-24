@@ -1,2 +1,2 @@
 # Kurier
-#trzeba cos napisac :)
+# czekamy na zadania
