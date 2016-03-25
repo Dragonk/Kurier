@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lista funkcjonalności</title>
+	<meta charset="utf-8"/>
+	<style>
+		body
+		{
+			background-color: rgba(140,140,140,0.6);
+		}
+		div#mainContent
+		{
+			width: 75%;
+			margin-top: 50px;
+			margin: 0 auto;
+			margin-bottom: 50px;
+			text-align: justify;
+		}
+		header#naglowek
+		{
+			display: block;
+			font-size: 1.5em;
+			text-align: center;
+			padding: 20px 0;
+		}
+		main#main p
+		{
+			display: block;
+		}
+		footer
+		{
+			display:block;
+			font-size: 0.75em;
+			text-align: center;
+			margin-top: 15px;
+			font-style: italic;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="mainContent">
+		<header id="naglowek">
+			<p>Lista funkcjonalności systemu zarządzania firmą kurierską</p>
+		</header>
+		<main id="main">
+			<p>System powinien udostępniać następujące funkcjonalności:</p>
+			<ul>
+				<li>Baza danych aplikacji:
+					<ul>
+						<li>Sekcja przechowująca dane paczek:
+							<ul>
+								<li>Każda paczka posiada numer, datę nadania, datę przyjęcia na magazyn, priorytet, adres docelowy oraz status.</li>
+								<li>Paczka posiada opcjonalną kolumnę przechowującą numer telefonu do klienta.</li>
+								<li>Dostarczone paczki trafiają do archiwum.</li>
+								<li>Paczka posiada opcjonalną kolumnę, w której przechowywany jest identyfikator klienta - z myślą
+								o stałych klientach.</li>
+								<li>Paczka, która posiada status "w doręczeniu", powinna mieć również przypisany identyfikator kuriera.</li>
+							</ul>
+						</li>
+						<li>Sekcja przechowująca dane floty:
+							<ul>
+								<li>Każdy samochód posiada swój numer, nazwę marki, model, status oraz datę następnego przeglądu technicznego.</li>
+								<li>Samochody mające awarię trafiają do osobnej tabeli przechowującej identyfikatory samochodów oraz opisy awarii.</li>
+							</ul>
+						</li>
+						<li>Sekcja przechowująca dane kurierów:
+							<ul>
+								<li>Kurier posiada identyfikator, imię, nazwisko, numer telefonu oraz status.</li>
+								<li>Kurier, który jest w trasie posiada również przypisany identyfikator pojazdu.</li>
+							</ul>
+						</li>
+						<li>Sekcja przechowująca informacje o rejonach:
+							<ul>
+								<li>Każda ulica posiada swój identyfikator oraz rejon, do którego należy.</li>
+								<li>Każdy rejon posiada identyfikator oraz opis.</li>
+							</ul>
+						</li>
+						<li>Sekcja przechowująca dane o klientach:
+							<ul>
+								<li>Klient ma możliwość założenia sobie konta w serwisie - dzięki czemu ma dostęp do archiwum swoich przesyłek.</li>
+								<li>Klient identyfikowany jest przez swój login oraz hashowane hasło.</li>
+								<li>Klient może podać swój adres e-mail oraz numer telefonu.</li>
+								<li>Klient posiada adres, w celu przyspieszenia nadania paczki.</li>
+							</ul>
+						</li>
+						
+						</li>
+					</ul>
+				</li>
+				<li>Strona internetowa udostępnia formularz, w którym podaje się numer przesyłki. Klient po wprowadzeniu poprawnego
+				numeru otrzymuje informację o statusie przesyłki.</li>
+				<li>Stali klienci mogą założyć konto w serwisie -> dzięki czemu mają możliwość dostępu do archiwum swoich przesyłek.</li>
+				<li>System posiada następujących użytkowników:
+					<ul>
+						<li>Administratorzy systemu - pracownicy biura, którzy mają uprawnienia do dodawania paczek do systemu, zarządzania
+						flotą oraz zarządzania kurierami. Administratorzy systemu mają dostęp nadrzędny do całości bazy danych.</li>
+						<li>Kurierzy - mają uprawnienia do zmiany statusu przesyłek oraz ustawiania statusu samochodów - mogą zgłaszać
+						awarie, jednakże nie mogą modyfikować samej floty oraz umieszczać samochodów w tabeli samochodów przeznaczonych
+						do naprawy.</li>
+						<li>Użytkownicy, którzy nie są zarejetrowanymi klientami - mają dostęp jedynie do odczytu statusu przesyłki o podanym
+						identyfikatorze.</li>
+						<li>Zarejestrowani klienci - posiadają dostęp taki sam, jak niezarejestrowani użytkownicy, ale mają dodatkowy dostęp
+						do własnych przesyłek w archiwum.
+						</li>
+					</ul>
+				</li>
+				<li>Z poziomu strony internetowej można zamówić nadanie paczki - poprzez podanie adresu do odbioru.
+				Dane paczki wprowadzane są do systemu przez administratora.
+				<ul>
+					<li>Niezarejestrowany użytkownik musi się uwierzytelnić - poprzez mechanizm Captcha lub inny.</li>
+					<li>Klient zarejestrowany nadaje paczkę automatycznie.</li>
+				</ul>
+				</li>
+				<li>System musi działać stabilnie dla następującej ilości danych:
+					<ul>
+						<li>Liczba paczek/dzień: 2500</li>
+						<li>Liczba kurierów: 200</li>
+						<li>Liczba samochodów: 400</li>
+						<li>Liczba stałych klientów w bazie: 150000</li>
+						<li>Liczba zapytań dla formularza wyszukiwania paczki: 200 rq/min</li>
+						<li>Liczba paczek przechowywanych w archiwum: 1000000</li>
+					</ul>
+				</li>
+				<li>Aplikacja lokalna służy do administrowania całym systemem. Musi ona posiadać następujące moduły:
+					<ul>
+						<li>Moduł raportowania - statusy paczek, ich liczba, statusy kurierów, floty oraz klientów.</li>
+						<li>Zarządzanie całą bazą danych - dodawanie paczek, przenoszenie ich do archiwum, zarządzanie flotą
+						oraz kurierami.</li>
+					</ul>
+				</li>
+				<li>Aplikacja lokalna musi być prosta w obsłudze oraz odporna na błędy - użytkownik końcowy może nie być specjalistą.
+				Do obsługi nie może być wymagana znajomość baz danych - program musi być typu "user friendly".</li>
+				<li>System musi udostępniać możliwość rozbudowy o kolejne moduły, w celu zachowania aktualności oraz bezpieczeństwa.</li>
+			</ul>
+		</main>
+		<footer></footer>
+	</div>
+</body>
+
+</html>
