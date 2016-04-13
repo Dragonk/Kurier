@@ -1,2 +1,6 @@
-# Kurier
-# klawir chce zrobic aplikacje w c++/c# dla potrzeb zadania^^
+Zadania do wykonania:
+ - ściągnąć program 'Planer'
+ - ściągnąć plik zadania.xml
+ - otworzyć plik zadania.xml za pomocą programu Planer
+ - ...
+ - profit
