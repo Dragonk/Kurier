@@ -17,6 +17,7 @@ Metoda <i>getAttribute("nazwa")</i> zwraca obiekt, który jest typem nadrzędnym
  - <b>String</b> - String napis = session.getAttribute("nazwa").toString();
  - <b>int</b> - int liczba = Integer.parseInt(session.getAttribute("nazwa")+"").intValue();
  - <b>double</b> - double liczba = Double.parseDouble(session.getAttribute("nazwa")+"").doubleValue();
+
 **UWAGA**
 **Jeżeli <b>session.getAttribute(...)</b> zwróci null, to parsowanie do typów pierwotnych (<i>int, float, double</i>) się nie powiedzie i rzuci wyjątek IllegalArgumentException! Przed parsowaniem trzeba sprawdzić, czy konwertowany obiekt nie jest <b>null</b>!**
 
