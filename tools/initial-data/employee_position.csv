@@ -1,0 +1,5 @@
+ID,CODE,INTERNAL_NAME
+0,DRIVER,driver
+1,WAREHOUSEMAN,warehouseman
+2,OFFICE_WORKER,office worker
+3,CALL_CENTER,call center
