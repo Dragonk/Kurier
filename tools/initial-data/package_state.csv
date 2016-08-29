@@ -1,0 +1,5 @@
+ID,CODE,INTERNAL_NAME
+0,RECEIVED,received
+1,DELIVERED,delivered
+2,IN_DELIVERY,in delivery
+3,RETURNED,returned to sender

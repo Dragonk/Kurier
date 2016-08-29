@@ -1,0 +1,6 @@
+ID,CODE,INTERNAL_NAME
+0,READY,ready
+1,ON_THE_ROAD,on the road
+2,OUT_OF_ORDER,out-of-order
+3,IN_REPAIR,in repair
+4,TECHNICAL_REVIEW,technical review

@@ -1,0 +1,6 @@
+ID,CODE,INTERNAL_NAME
+0,VISITOR,visitor
+1,EMPLOYEE,employee
+2,CLIENT,client
+3,SYS_ADMIN,system administrator
+4,AUTHORITIES,authorities
