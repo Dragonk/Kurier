@@ -1,0 +1,102 @@
+body {
+	background-color: #f1f1f1;
+	width: 100%;
+	margin: 0;
+}
+
+#header {
+	width: 100%;
+	margin: 0;
+}
+
+#header .logo {
+	width: 100%;
+	padding: 10px auto;
+	text-align: center;
+}
+
+#header .navbar {
+	background-color: #000;
+	width: 100%;
+	padding: 10px auto;
+	text-align: center;
+}
+
+#header .navbar ul {
+    list-style-type: none;
+}
+
+#header .navbar ul li {
+	display: inline-block;
+    list-style: none;
+    text-align: center;
+    background-color: #000000;
+    margin-right: 30px;
+    width: 150px;
+    line-height: 60px;
+}
+
+#header .navbar ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    display: block;
+}
+
+#header .navbar ul li a:hover {
+    text-decoration: none;
+    color: #000000;
+    background-color: #33B5E5;
+}
+#content {
+	width: 85%;
+	overflow: hidden; 
+	margin: 0 auto;
+	padding: 15px;
+}
+#content .data {
+	margin-left: 15px;
+	margint-right: 15px;
+}
+
+#content .data .small {
+	font-size: 10px;
+}
+
+#content table tr td {
+	background-color: #d1f1d1;
+	width: 300px;
+	height: 30px;
+	margin: 10px;
+	text-align: center;
+}
+
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -60px;	
+	
+}
+
+#footer, .push {
+	height: 60px;
+}
+
+#footer {
+    color: #FFFFFF;
+    background-color: #000000;
+}
+
+#footer .left {
+	float: left;
+	display: inline-block;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+#footer .right {
+	float: right;
+	display: inline-block;
+	margin-top: 20px;
+	margin-right: 20px;
+}
